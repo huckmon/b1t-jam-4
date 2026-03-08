@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dfi8jfr6ul838"]
+
+[node name="camera" type="CanvasLayer" unique_id=1086846855]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1534779000]
+z_index = 1
+zoom = Vector2(0.5, 0.5)

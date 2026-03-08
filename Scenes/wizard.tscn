@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dqbrn25cu03k7"]
+
+[ext_resource type="Script" uid="uid://c2p03s3rxy05c" path="res://Scripts/wizard.gd" id="1_ilitf"]
+[ext_resource type="Texture2D" uid="uid://crwp78cr1vdp6" path="res://Assets/wizard/wizard4.png" id="2_ilitf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ilitf"]
+height = 32.0
+
+[node name="wizard" type="CharacterBody2D" unique_id=128621925]
+script = ExtResource("1_ilitf")
+
+[node name="wizard_sprite" type="Sprite2D" parent="." unique_id=1814968857]
+position = Vector2(0, 32)
+texture = ExtResource("2_ilitf")
+offset = Vector2(0, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2138813920]
+position = Vector2(-1, 16)
+shape = SubResource("CapsuleShape2D_ilitf")
+
+[node name="animation_timer" type="Timer" parent="." unique_id=793894181]
+wait_time = 0.2
+
+[connection signal="timeout" from="animation_timer" to="." method="_on_animation_timer_timeout"]

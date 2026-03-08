@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://crmk5bp3qlk4j"]
+
+[ext_resource type="Texture2D" uid="uid://bnjwxv38yoi5f" path="res://Assets/floors/level_floor.png" id="1_y2t05"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ao1r1"]
+albedo_texture = ExtResource("1_y2t05")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o3okv"]
+material = SubResource("StandardMaterial3D_ao1r1")
+
+[node name="level" type="Node3D" unique_id=689901588]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=843983675]
+mesh = SubResource("PlaneMesh_o3okv")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=945246978]
+transform = Transform3D(0.7589049, -0.2994552, 0.57826465, -0.013089284, 0.88080245, 0.47330305, -0.65106994, -0.36676103, 0.6645257, 1.4062216, 1.2108676, 1.566838)

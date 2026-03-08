@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bg6b1sepjy45x"]
+
+[ext_resource type="Texture2D" uid="uid://dnkchoki1ub3k" path="res://Assets/floors/level_floor_3.png" id="1_nvnu3"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nvnu3"]
+b = Vector2(-725, -363)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_agfsv"]
+a = Vector2(1, 1)
+b = Vector2(-724, 364)
+
+[node name="floor" type="Node2D" unique_id=394952926]
+
+[node name="level_floor" type="Sprite2D" parent="." unique_id=114012096]
+z_index = -1
+position = Vector2(0, -128)
+texture = ExtResource("1_nvnu3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1431786261]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=120118908]
+position = Vector2(722, -130)
+shape = SubResource("SegmentShape2D_nvnu3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=214632276]
+position = Vector2(0, 235)
+shape = SubResource("SegmentShape2D_nvnu3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=273865065]
+position = Vector2(-1, -493)
+shape = SubResource("SegmentShape2D_agfsv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=199814795]
+position = Vector2(724, -129)
+shape = SubResource("SegmentShape2D_agfsv")
