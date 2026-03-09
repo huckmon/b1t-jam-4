@@ -4,5 +4,6 @@
 [ext_resource type="Script" uid="uid://dkt4ely7ukx2m" path="res://Scripts/left_hand.gd" id="2_0eyl5"]
 
 [node name="left_hand" type="Sprite2D" unique_id=646380652]
+texture_filter = 1
 texture = ExtResource("1_0eyl5")
 script = ExtResource("2_0eyl5")

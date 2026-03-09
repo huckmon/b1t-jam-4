@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dqbrn25cu03k7"]
 
 [ext_resource type="Script" uid="uid://c2p03s3rxy05c" path="res://Scripts/wizard.gd" id="1_ilitf"]
-[ext_resource type="Texture2D" uid="uid://crwp78cr1vdp6" path="res://Assets/characters/wizard4.png" id="2_ilitf"]
+[ext_resource type="Texture2D" uid="uid://x4htlfagse48" path="res://Assets/characters/wizard6.png" id="2_mqqw1"]
 [ext_resource type="Texture2D" uid="uid://bvuf66coaai7b" path="res://Assets/characters/shadow2.png" id="3_33wk7"]
-[ext_resource type="Texture2D" uid="uid://cwgefatei0xn1" path="res://Assets/characters/hat2.png" id="3_mqqw1"]
+[ext_resource type="Texture2D" uid="uid://dvq58ganumtfa" path="res://Assets/characters/hat3.png" id="3_mqqw1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ilitf"]
 height = 32.0
@@ -13,15 +13,18 @@ script = ExtResource("1_ilitf")
 
 [node name="wizard_sprite" type="Sprite2D" parent="." unique_id=1814968857]
 z_index = 1
+texture_filter = 1
 position = Vector2(0, 32)
-texture = ExtResource("2_ilitf")
+texture = ExtResource("2_mqqw1")
 offset = Vector2(1, -32)
 
 [node name="hat" type="Sprite2D" parent="wizard_sprite" unique_id=477173281]
+texture_filter = 1
 position = Vector2(-2, -68)
 texture = ExtResource("3_mqqw1")
 
 [node name="shadow" type="Sprite2D" parent="." unique_id=598112934]
+texture_filter = 1
 position = Vector2(0, 30)
 texture = ExtResource("3_33wk7")
 

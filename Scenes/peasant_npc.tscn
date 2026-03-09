@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://50enuqycig03"]
 
 [ext_resource type="Script" uid="uid://c1cc6j466nstf" path="res://Scripts/peasant_npc.gd" id="1_b7x8k"]
-[ext_resource type="Texture2D" uid="uid://ca2i374j5uu8r" path="res://Assets/characters/npc_base.png" id="1_u1pl3"]
+[ext_resource type="Texture2D" uid="uid://dtqiaqbs7avry" path="res://Assets/characters/wizard5.png" id="2_6brje"]
 [ext_resource type="Texture2D" uid="uid://n34m48drlyn5" path="res://Assets/characters/panic.png" id="2_b7x8k"]
 [ext_resource type="Texture2D" uid="uid://bvuf66coaai7b" path="res://Assets/characters/shadow2.png" id="3_6brje"]
 
@@ -17,15 +17,18 @@ script = ExtResource("1_b7x8k")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=1290410686]
 z_index = 1
+texture_filter = 1
 position = Vector2(0, 32)
-texture = ExtResource("1_u1pl3")
+texture = ExtResource("2_6brje")
 offset = Vector2(1, -32)
 
 [node name="panic_animation_sprite" type="Sprite2D" parent="sprite" unique_id=2041651306]
+texture_filter = 1
 position = Vector2(-2, -72)
 texture = ExtResource("2_b7x8k")
 
 [node name="shadow" type="Sprite2D" parent="." unique_id=1539484400]
+texture_filter = 1
 position = Vector2(0, 30)
 texture = ExtResource("3_6brje")
 

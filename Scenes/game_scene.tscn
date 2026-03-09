@@ -5,8 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://bg6b1sepjy45x" path="res://Scenes/floor.tscn" id="3_1ixah"]
 [ext_resource type="PackedScene" uid="uid://1qu8r316sjj" path="res://Scenes/left_hand.tscn" id="4_fiftr"]
 [ext_resource type="Shader" uid="uid://b70hdr2ge27gx" path="res://Scripts/background_shader.gdshader" id="6_2fmhe"]
+[ext_resource type="Shader" uid="uid://c3gdnlb01nanh" path="res://Scripts/camera_shader.gdshader" id="6_7iton"]
 [ext_resource type="PackedScene" uid="uid://50enuqycig03" path="res://Scenes/peasant_npc.tscn" id="6_rgj8m"]
 [ext_resource type="Texture2D" uid="uid://dxs3gg4nlfbhe" path="res://Assets/background/background4.png" id="7_2fmhe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5dgvu"]
+shader = ExtResource("6_7iton")
+shader_parameter/black = Color(0.067, 0.012, 0.067, 1)
+shader_parameter/white = Color(1, 1, 1, 1)
+shader_parameter/replacement_color = Color(0.8235294, 0.9098039, 1, 1)
+shader_parameter/replacement_color2 = Color(0.15686275, 0.047058824, 0.22745098, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ikfsv"]
 shader = ExtResource("6_2fmhe")
@@ -34,7 +42,15 @@ position = Vector2(-100, -127)
 z_index = 1
 zoom = Vector2(0.5, 0.5)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1390871709]
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=1390871709]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer" unique_id=955871229]
+material = SubResource("ShaderMaterial_5dgvu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="background" type="Sprite2D" parent="." unique_id=361721963]
 z_index = -10

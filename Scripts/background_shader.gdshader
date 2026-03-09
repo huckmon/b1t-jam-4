@@ -4,7 +4,7 @@ uniform float uv_scale : hint_range(0.0, 5.0, 0.1) = 0.5;
 varying vec2 world_uv;
 
 void vertex() {
-	UV.x += TIME;
+	UV.x += TIME * 0.5;
 }
 
 void fragment() {
