@@ -85,4 +85,5 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		stuck_check.stop()
 
 func _on_stuck_check_timeout() -> void:
-	randomise_direction()
+	current_velocity = current_velocity * -1.0
+	stuck_check.start()

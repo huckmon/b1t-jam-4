@@ -3,9 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://dqbrn25cu03k7" path="res://Scenes/wizard.tscn" id="1_x87qo"]
 [ext_resource type="Texture2D" uid="uid://dnkchoki1ub3k" path="res://Assets/floors/level_floor_3.png" id="2_fiftr"]
 [ext_resource type="PackedScene" uid="uid://bg6b1sepjy45x" path="res://Scenes/floor.tscn" id="3_1ixah"]
-[ext_resource type="PackedScene" uid="uid://dfi8jfr6ul838" path="res://Scenes/camera.tscn" id="3_6h5vk"]
 [ext_resource type="PackedScene" uid="uid://1qu8r316sjj" path="res://Scenes/left_hand.tscn" id="4_fiftr"]
+[ext_resource type="Shader" uid="uid://b70hdr2ge27gx" path="res://Scripts/background_shader.gdshader" id="6_2fmhe"]
 [ext_resource type="PackedScene" uid="uid://50enuqycig03" path="res://Scenes/peasant_npc.tscn" id="6_rgj8m"]
+[ext_resource type="Texture2D" uid="uid://dxs3gg4nlfbhe" path="res://Assets/background/background4.png" id="7_2fmhe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ikfsv"]
+shader = ExtResource("6_2fmhe")
+shader_parameter/uv_scale = 0.5
 
 [node name="game_scene" type="Node2D" unique_id=43219026]
 y_sort_enabled = true
@@ -22,10 +27,24 @@ texture = ExtResource("2_fiftr")
 [node name="left_hand" parent="." unique_id=646380652 instance=ExtResource("4_fiftr")]
 position = Vector2(-874.99994, 361.99997)
 
-[node name="camera" parent="." unique_id=1086846855 instance=ExtResource("3_6h5vk")]
-
 [node name="peasant_npc" parent="." unique_id=1003845328 instance=ExtResource("6_rgj8m")]
 position = Vector2(-100, -127)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=691977024]
+z_index = 1
+zoom = Vector2(0.5, 0.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1390871709]
+
+[node name="background" type="Sprite2D" parent="." unique_id=361721963]
+z_index = -10
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ikfsv")
+position = Vector2(-1151, -648)
+texture = ExtResource("7_2fmhe")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2560, 1440)
 
 [editable path="wizard"]
 [editable path="floor"]
