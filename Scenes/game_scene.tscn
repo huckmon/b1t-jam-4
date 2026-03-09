@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://50enuqycig03" path="res://Scenes/peasant_npc.tscn" id="6_rgj8m"]
 
 [node name="game_scene" type="Node2D" unique_id=43219026]
+y_sort_enabled = true
 
 [node name="wizard" parent="." unique_id=128621925 instance=ExtResource("1_x87qo")]
 

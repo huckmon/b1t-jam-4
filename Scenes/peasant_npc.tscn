@@ -8,8 +8,11 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6usod"]
 height = 32.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b7x8k"]
+radius = 11.0
+height = 34.0
+
 [node name="peasant_npc" type="CharacterBody2D" unique_id=1003845328]
-y_sort_enabled = true
 script = ExtResource("1_b7x8k")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=1290410686]
@@ -36,5 +39,17 @@ wait_time = 0.4
 [node name="panic_animation_timer" type="Timer" parent="." unique_id=257342533]
 wait_time = 0.2
 
+[node name="stuck_check" type="Timer" parent="." unique_id=386217672]
+wait_time = 0.2
+
+[node name="Area2D" type="Area2D" parent="." unique_id=876775293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1667260025]
+position = Vector2(0, 16)
+shape = SubResource("CapsuleShape2D_b7x8k")
+
 [connection signal="timeout" from="walk_animation_timer" to="." method="_on_walk_animation_timer_timeout"]
 [connection signal="timeout" from="panic_animation_timer" to="." method="_on_panic_animation_timer_timeout"]
+[connection signal="timeout" from="stuck_check" to="." method="_on_stuck_check_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
