@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bg6b1sepjy45x" path="res://Scenes/floor.tscn" id="3_1ixah"]
 [ext_resource type="PackedScene" uid="uid://dfi8jfr6ul838" path="res://Scenes/camera.tscn" id="3_6h5vk"]
 [ext_resource type="PackedScene" uid="uid://1qu8r316sjj" path="res://Scenes/left_hand.tscn" id="4_fiftr"]
+[ext_resource type="PackedScene" uid="uid://50enuqycig03" path="res://Scenes/peasant_npc.tscn" id="6_rgj8m"]
 
 [node name="game_scene" type="Node2D" unique_id=43219026]
 
@@ -22,4 +23,8 @@ position = Vector2(-874.99994, 361.99997)
 
 [node name="camera" parent="." unique_id=1086846855 instance=ExtResource("3_6h5vk")]
 
+[node name="peasant_npc" parent="." unique_id=1003845328 instance=ExtResource("6_rgj8m")]
+position = Vector2(-100, -127)
+
+[editable path="wizard"]
 [editable path="floor"]

@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dqbrn25cu03k7"]
 
 [ext_resource type="Script" uid="uid://c2p03s3rxy05c" path="res://Scripts/wizard.gd" id="1_ilitf"]
-[ext_resource type="Texture2D" uid="uid://crwp78cr1vdp6" path="res://Assets/wizard/wizard4.png" id="2_ilitf"]
+[ext_resource type="Texture2D" uid="uid://crwp78cr1vdp6" path="res://Assets/characters/wizard4.png" id="2_ilitf"]
+[ext_resource type="Texture2D" uid="uid://bvuf66coaai7b" path="res://Assets/characters/shadow2.png" id="3_33wk7"]
+[ext_resource type="Texture2D" uid="uid://btrq8m85gswtd" path="res://Assets/characters/hat.png" id="3_mqqw1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ilitf"]
 height = 32.0
@@ -10,12 +12,22 @@ height = 32.0
 script = ExtResource("1_ilitf")
 
 [node name="wizard_sprite" type="Sprite2D" parent="." unique_id=1814968857]
+z_index = 1
 position = Vector2(0, 32)
 texture = ExtResource("2_ilitf")
-offset = Vector2(0, -32)
+offset = Vector2(1, -32)
+
+[node name="hat" type="Sprite2D" parent="wizard_sprite" unique_id=477173281]
+position = Vector2(-2, -68)
+texture = ExtResource("3_mqqw1")
+
+[node name="shadow" type="Sprite2D" parent="." unique_id=598112934]
+y_sort_enabled = true
+position = Vector2(0, 30)
+texture = ExtResource("3_33wk7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2138813920]
-position = Vector2(-1, 16)
+position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_ilitf")
 
 [node name="animation_timer" type="Timer" parent="." unique_id=793894181]

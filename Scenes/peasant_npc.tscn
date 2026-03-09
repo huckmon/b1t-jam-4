@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://50enuqycig03"]
+
+[ext_resource type="Script" uid="uid://c1cc6j466nstf" path="res://Scripts/peasant_npc.gd" id="1_b7x8k"]
+[ext_resource type="Texture2D" uid="uid://ca2i374j5uu8r" path="res://Assets/characters/npc_base.png" id="1_u1pl3"]
+[ext_resource type="Texture2D" uid="uid://n34m48drlyn5" path="res://Assets/characters/panic.png" id="2_b7x8k"]
+[ext_resource type="Texture2D" uid="uid://bvuf66coaai7b" path="res://Assets/characters/shadow2.png" id="3_6brje"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6usod"]
+height = 32.0
+
+[node name="peasant_npc" type="CharacterBody2D" unique_id=1003845328]
+y_sort_enabled = true
+script = ExtResource("1_b7x8k")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1290410686]
+z_index = 1
+position = Vector2(0, 32)
+texture = ExtResource("1_u1pl3")
+offset = Vector2(1, -32)
+
+[node name="panic_animation_sprite" type="Sprite2D" parent="sprite" unique_id=2041651306]
+position = Vector2(-2, -72)
+texture = ExtResource("2_b7x8k")
+
+[node name="shadow" type="Sprite2D" parent="." unique_id=1539484400]
+position = Vector2(0, 30)
+texture = ExtResource("3_6brje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=951924781]
+position = Vector2(0, 16)
+shape = SubResource("CapsuleShape2D_6usod")
+
+[node name="walk_animation_timer" type="Timer" parent="." unique_id=1284908650]
+wait_time = 0.4
+
+[node name="panic_animation_timer" type="Timer" parent="." unique_id=257342533]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="walk_animation_timer" to="." method="_on_walk_animation_timer_timeout"]
+[connection signal="timeout" from="panic_animation_timer" to="." method="_on_panic_animation_timer_timeout"]

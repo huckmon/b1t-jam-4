@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crwp78cr1vdp6"
-path="res://.godot/imported/wizard4.png-d78efa5b53b4f59cb6afb2d0a116e4f4.ctex"
+uid="uid://ca2i374j5uu8r"
+path="res://.godot/imported/npc_base.png-2ec04bc1d6701e5e61489618f4ccf47e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/wizard/wizard4.png"
-dest_files=["res://.godot/imported/wizard4.png-d78efa5b53b4f59cb6afb2d0a116e4f4.ctex"]
+source_file="res://Assets/characters/npc_base.png"
+dest_files=["res://.godot/imported/npc_base.png-2ec04bc1d6701e5e61489618f4ccf47e.ctex"]
 
 [params]
 
