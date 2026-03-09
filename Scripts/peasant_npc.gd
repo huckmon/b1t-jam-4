@@ -18,17 +18,22 @@ var walking_rotation: float = 15.0
 var speed: int = 150
 var count: float = 0.0
 
+var current_velocity
+
 func _ready() -> void:
-	panic_sprite.visible = false
-	# get a random direction to pass to physics process and head in that direction
+	panic_sprite.visible = false	
+	var init_speed: Array = [-1.0, 1.0]
+	current_velocity = Vector2(init_speed.pick_random(),init_speed.pick_random())
 
 func _physics_process(_delta: float) -> void:
-	velocity = Input.get_vector("left", "right", "up", "down") * speed
+	velocity = current_velocity.normalized() * speed
+	# possibly add a timer in a non paniced stated to have them lerp and slow down before stopping for a breif moment to add some sort of natural/individual movment to everyone
 	if velocity != Vector2(0.0,0.0):
 		walking_movements()
 	else:
 		sprite.rotation = 0.0
 		walk_animation_timer.stop()
+	print(velocity)
 	move_and_slide()
 	squash_movement()
 	count += 0.1

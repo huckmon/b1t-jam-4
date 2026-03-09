@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://1qu8r316sjj"]
 
 [ext_resource type="Texture2D" uid="uid://rqolbu84vchd" path="res://Assets/hands/left_hand2.png" id="1_s81gi"]
+[ext_resource type="Script" uid="uid://dkt4ely7ukx2m" path="res://Scripts/left_hand.gd" id="2_0eyl5"]
 
 [node name="left_hand" type="Sprite2D" unique_id=646380652]
 texture = ExtResource("1_s81gi")
+script = ExtResource("2_0eyl5")
