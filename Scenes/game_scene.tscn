@@ -33,7 +33,7 @@ texture = ExtResource("2_fiftr")
 [node name="floor" parent="." unique_id=394952926 instance=ExtResource("3_1ixah")]
 
 [node name="left_hand" parent="." unique_id=646380652 instance=ExtResource("4_fiftr")]
-position = Vector2(-874.99994, 361.99997)
+position = Vector2(-880, 430)
 
 [node name="peasant_npc" parent="." unique_id=1003845328 instance=ExtResource("6_rgj8m")]
 position = Vector2(-100, -127)
@@ -56,7 +56,7 @@ grow_vertical = 2
 z_index = -10
 texture_repeat = 2
 material = SubResource("ShaderMaterial_ikfsv")
-position = Vector2(-1151, -648)
+position = Vector2(-1280, -720)
 texture = ExtResource("7_2fmhe")
 centered = false
 region_enabled = true

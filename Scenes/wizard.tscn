@@ -32,7 +32,11 @@ texture = ExtResource("3_33wk7")
 position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_ilitf")
 
-[node name="animation_timer" type="Timer" parent="." unique_id=793894181]
+[node name="walk_animation_timer" type="Timer" parent="." unique_id=793894181]
 wait_time = 0.2
 
-[connection signal="timeout" from="animation_timer" to="." method="_on_animation_timer_timeout"]
+[node name="shoot_animation_timer" type="Timer" parent="." unique_id=1110292733]
+wait_time = 0.2
+
+[connection signal="timeout" from="walk_animation_timer" to="." method="_on_walk_animation_timer_timeout"]
+[connection signal="timeout" from="shoot_animation_timer" to="." method="_on_shoot_animation_timer_timeout"]

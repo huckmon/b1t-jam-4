@@ -24,8 +24,6 @@ var current_velocity: Vector2
 
 func _ready() -> void:
 	panic_sprite.visible = false	
-	var init_speed: Array = [-1.0, 1.0]
-	#current_velocity = Vector2(init_speed.pick_random(),init_speed.pick_random())
 	current_velocity = Vector2(randf_range(-1.0,1.0),randf_range(-1.0,1.0))
 
 func _physics_process(_delta: float) -> void:
@@ -57,8 +55,6 @@ func walking_movements():
 	walk_animation_timer.start(walk_anim_timer)
 
 func randomise_direction():
-	#current_velocity = Vector2(randf_range(-1.0,1.0),randf_range(-1.0,1.0))
-	#current_velocity = current_velocity * -1
 	if current_velocity[0] > 0:
 		current_velocity[0] = randf_range(-1.0,0)
 	else:

@@ -45,14 +45,14 @@ wait_time = 0.2
 [node name="stuck_check" type="Timer" parent="." unique_id=386217672]
 wait_time = 0.2
 
-[node name="Area2D" type="Area2D" parent="." unique_id=876775293]
+[node name="collision_detector" type="Area2D" parent="." unique_id=876775293]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1667260025]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision_detector" unique_id=1667260025]
 position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_b7x8k")
 
 [connection signal="timeout" from="walk_animation_timer" to="." method="_on_walk_animation_timer_timeout"]
 [connection signal="timeout" from="panic_animation_timer" to="." method="_on_panic_animation_timer_timeout"]
 [connection signal="timeout" from="stuck_check" to="." method="_on_stuck_check_timeout"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="collision_detector" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="collision_detector" to="." method="_on_area_2d_body_exited"]
